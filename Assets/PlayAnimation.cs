@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
+using UnityEngine.SceneManagement;
 
 public class PlayAnimation : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class PlayAnimation : MonoBehaviour
         if (!isPlaying && Input.GetKeyDown(KeyCode.Space))
         {
             test.Play();
+        }
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
